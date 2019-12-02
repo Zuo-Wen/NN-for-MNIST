@@ -39,8 +39,8 @@ y_train = y[0:train_size]
 # noise = tf.random.normal(shape = x_train.shape,mean = 0.0,stddev = 0.0001)
 # x_train = x_train + noise
 
-x_validation = x[train_size:60001,:,:]
-y_validation = y[train_size:60001]
+x_validation = x[train_size:60000,:,:]
+y_validation = y[train_size:60000]
 y_train_onehot = tf.one_hot(y_train, depth=output_node)
 y_validation_onehot = tf.one_hot(y_validation, depth=output_node)
 y_test_onehot = tf.one_hot(y_test, depth=output_node)
